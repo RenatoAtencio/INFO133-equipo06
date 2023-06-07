@@ -6,4 +6,4 @@ Proyecto Base de datos
         Tomas Contreras 
         Jorge Cheuqueman 
 <pre />
-Link excel diccionario: https://docs.google.com/spreadsheets/d/1YBKOQ7V5c6PJqXLv01RYxq72Hfzfm3d5m_ZBXHs02JY/edit#gid=0
+Link excel diccionario: https://docs.google.com/spreadsheets/d/1YBKOQ7V5c6PJqXLv01RYxq72Hfzfm3d5m_ZBXHs02JY/edit?usp=sharing
