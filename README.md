@@ -1,7 +1,8 @@
 # INFO133-equipo06 
-Proyecto Base de datos\
-    ###Integrantes\
-        Renato Atencio\
-        Tomas Contreras\
+<pre>
+Proyecto Base de datos <br />
+    ###Integrantes <br />
+        Renato Atencio <br />
+        Tomas Contreras <br />
         Jorge Cheuqueman <br />
-    
+<pre />
