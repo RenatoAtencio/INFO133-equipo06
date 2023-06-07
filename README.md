@@ -1,6 +1,6 @@
 # INFO133-equipo06 
 <pre>
-Proyecto Base de datos <br />
+Proyecto Base de datos 
     ###Integrantes <br />
         Renato Atencio <br />
         Tomas Contreras <br />
