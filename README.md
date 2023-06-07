@@ -3,5 +3,5 @@ Proyecto Base de datos\
     ###Integrantes\
         Renato Atencio\
         Tomas Contreras\
-        Jorge Cheuqueman <br \>
+        Jorge Cheuqueman <br />
     
