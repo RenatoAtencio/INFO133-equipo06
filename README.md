@@ -1,9 +1,12 @@
 # INFO133-equipo06 
-<pre>
-Proyecto Base de datos
-    ### Integrantes 
-        Renato Atencio 
-        Tomas Contreras 
-        Jorge Cheuqueman 
-<pre />
-Link excel diccionario: https://docs.google.com/spreadsheets/d/1YBKOQ7V5c6PJqXLv01RYxq72Hfzfm3d5m_ZBXHs02JY/edit?usp=sharing
+
+### Integrantes 
+   * Renato Atencio
+   * Tomas Contreras
+   * Jorge Cheuqueman
+
+### Pais
+&emsp; &ensp; Bolivia
+
+### Link Excel Diccionario de datos
+&emsp; &ensp;  [Link Excel](https://docs.google.com/spreadsheets/d/1YBKOQ7V5c6PJqXLv01RYxq72Hfzfm3d5m_ZBXHs02JY/edit#gid=0)
