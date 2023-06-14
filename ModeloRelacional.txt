@@ -1,9 +1,0 @@
-MedioPrensa(PK_NombreMP,AñoFundacion,Cobertura)
-Fundador(PK_Fundador_Id,Nombre)
-Ubicacion(PK_(FK_NombreMP),Continente,Pais,Region,Ciudad)
-Cuenta(PK_(LinkRS),Tipo,FK_NombreMP,Fecha,FK_Cantidad)
-SitioWeb(PK_LinkSW,FK_NombreMP)
-Pagina(PK_Url_Principal,Categoria,XPATH_Fecha,XPATH_Titulo,XPATH_Contenido,FK_LinkSW)
-Seguidores(PK_Cantidad)
-
-Fundado(PK_(FK_NombreMP,FK_Fundador_Id))
