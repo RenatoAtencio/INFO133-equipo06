@@ -5,10 +5,10 @@
    * Tomas Contreras
    * Jorge Cheuqueman
 
-### Pais
+### Pais (PARTE A)
 &emsp; &ensp; Bolivia
 
-### Variables a estudiar 
+### Variables a estudiar (PARTE B)
   * Salud
   * Seguridad
   * Trabajo
