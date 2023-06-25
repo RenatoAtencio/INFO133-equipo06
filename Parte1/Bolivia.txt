@@ -1,0 +1,131 @@
+Página Siete:
+	URL: https://www.paginasiete.bo/
+	Nombre: Página SIETE
+	Ciudad: La paz
+	Region: La paz
+	Pais: Bolivia
+	Continente: Sur America
+	Año de creacion: 2010
+
+El Deber:
+URL: https://www.eldeber.com.bo/
+
+Los Tiempos:
+URL: https://www.lostiempos.com/
+
+La Razón:
+URL: https://www.la-razon.com/
+
+El Diario:
+URL: https://www.eldiario.net/
+
+Opinión:
+URL: https://www.opinion.com.bo/
+
+Erbol:
+URL: https://www.erbol.com.bo/
+
+El País:
+URL: https://elpais.bo/
+
+El Potosí:
+URL: https://elpotosi.net/
+
+El Mundo:
+URL: https://elmundo.com.bo/
+
+El Día:
+URL: https://www.eldia.com.bo/
+
+La Época:
+URL: https://la-epoca.com.bo/
+
+Brújula Digital:
+URL: https://www.brujuladigital.net/
+
+La Región:
+URL: https://www.laregion.bo/
+
+Correo del Sur:
+URL: https://correodelsur.com/
+
+La Patria:
+URL: https://www.lapatria.bo/
+
+El Fulgor:
+URL: http://elfulgor.com/
+
+La Voz de Tarija:
+URL: https://lavozdetarija.com/
+
+El País (otro):
+URL: https://elpais.com/noticias/bolivia/
+
+CNN:
+URL: https://cnnespanol.cnn.com/category/zona-andina/bolivia/
+
+Eitb:
+URL: https://www.eitb.eus/es/tag/bolivia/
+
+El Comercio:
+URL: https://elcomercio.pe/noticias/bolivia/
+
+La Nación:
+URL: https://www.lanacion.com.ar/tema/bolivia-tid182/
+
+Infobae:
+URL: https://www.infobae.com/tag/bolivia/
+
+20 Minutos:
+URL: https://www.20minutos.es/minuteca/bolivia/
+
+Gestión: 
+URL: https://gestion.pe/noticias/bolivia/
+
+Bolivia TV: 
+URL: https://www.boliviatv.bo/principal/
+
+Eju!:
+URL: https://eju.tv
+
+EuropaPress:
+URL: https://www.europapress.es/temas/bolivia/
+
+Público: 
+URL: https://www.publico.es/tag/bolivia
+
+WCS Bolivia:
+URL: https://bolivia.wcs.org/es-es/Recursos-Informativos/Sala-de-noticias.aspx
+
+La Sexta: 
+URL: https://www.lasexta.com/temas/bolivia-1
+
+El Tiempo: 
+URL: https://www.eltiempo.com/noticias/bolivia
+
+El Periódico: 
+URL: https://www.elperiodico.com/es/lugares/bolivia-7331
+
+Ministerio de Salud y Deportes:
+URL: https://www.minsalud.gob.bo
+
+Agencia de Noticias Fides:
+URL: https://www.noticiasfides.com
+
+El Universo: 
+URL: https://www.eluniverso.com/temas/bolivia/
+
+Ámbito:
+URL: https://www.ambito.com/bolivia-a5123323
+
+Clarín:
+URL: https://www.clarin.com/tema/bolivia.html
+
+Redgol:
+URL: https://redgol.cl/tema/seleccion-bolivia
+
+
+
+
+
+

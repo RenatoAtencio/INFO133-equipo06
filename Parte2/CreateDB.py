@@ -1,6 +1,7 @@
 import mariadb
 import sys
 
+#Cambiar la password a password que uno usa al conectarse a la DB
 try:
     conn = mariadb.connect(
         user="root",
@@ -13,7 +14,7 @@ except mariadb.Error as e:
     print(f"Error connecting to MariaDB Platform: {e}")
     sys.exit(1)
 
-#Crea la BD Informacion_Territorial (la elimina al comienzo y quizas de error, comentar el drop si ese es el caso)
+#Crea la BD Informacion_Territorial (la elimina al comienzo y quizas de error, comentar el drop database si ese es el caso)
 
 cur = conn.cursor()
 cur.execute("DROP database Informacion_Territorial")
