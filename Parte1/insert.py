@@ -64,7 +64,7 @@ cur.execute("CREATE TABLE SitioWeb( \
 #Pagina(PK_LinkPagina,Categoria,XPATHPagina,FK_LinkSitioWeb)
 cur.execute("CREATE TABLE Pagina( \
             LinkPagina VARCHAR (225), \
-            XPATHPagina VARCHAR(225), \
+            XPATHLinksNoticias VARCHAR(225), \
             XPATHFecha VARCHAR(225), \
             XPATHTitulo VARCHAR(225), \
             XPATHContenido VARCHAR(225), \
@@ -73,7 +73,7 @@ cur.execute("CREATE TABLE Pagina( \
             FOREIGN KEY(LinkSitioWeb) REFERENCES SitioWeb(LinkSitioWeb))")
 #Noticia(PK_LinkNoticia,XPATHFecha,XPATHContenido,XPATHTitulo,FK_LinkPagina)
 cur.execute("CREATE TABLE Noticia( \
-            LinkNoticia VARCHAR(225), \
+            LinkNoticia VARCHAR(1000), \
             Fecha VARCHAR(225), \
             Titulo VARCHAR(225), \
             Contenido VARCHAR(225), \
@@ -89,9 +89,9 @@ cur.execute("CREATE TABLE Fundado( \
             FOREIGN KEY(FundadorID) REFERENCES Fundador(FundadorID))")
 
 #Sitios web para cargar altiro en la base de datos, sigue la estructura
-#NombreSitioWeb,AñoFundacion,Cobertura,LinkSW,Categorias(dejar 3 por ahora),XPATH(Titulo,Contenido,Fecha) Cuidado con el tipo de coma `` o ""
-sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["Nacional","Seguridad","Economia"],["//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]],
-           ["ElDeber","2016","Internacional","https://eldeber.com.bo/",["Pais","Economia","Mundo"],["//div//h1","//div//p","//div[@class=`dateNote`]"]]
+#NombreSitioWeb,AñoFundacion,Cobertura,LinkSW,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha) Cuidado con el tipo de coma `` o ""
+sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]],
+           ["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div//h1","//div//p","//div[@class=`dateNote`]"]]
            ]
 
 
@@ -101,7 +101,7 @@ for SW in sitiosWeb:
     cur.execute(f"INSERT INTO SitioWeb(LinkSitioWeb,NombreMedioPrensa) VALUES('{SW[3]}','{SW[0]}')")
     for i in range(0,3):
         Link=SW[3]+SW[4][i]
-        cur.execute(f"INSERT INTO Pagina(LinkPagina,XPATHTitulo,XPATHContenido,XPATHFecha,LinkSitioWeb) VALUES('{Link}','{SW[5][0]}','{SW[5][1]}','{SW[5][2]}','{SW[3]}')")
+        cur.execute(f"INSERT INTO Pagina(LinkPagina,XPATHLinksNoticias,XPATHTitulo,XPATHContenido,XPATHFecha,LinkSitioWeb) VALUES('{Link}','{SW[5][0]}','{SW[5][1]}','{SW[5][2]}','{SW[5][3]}','{SW[3]}')")
 
 #NombreMedioPrensa, LinkPaginaPrincipal = input("Ingrese el Nombre y Link de la pagina del Medio de prensa(Separados por ','): ").split(",")
 #print("Nombre Medio Prensa : {} ".format(NombreMedioPrensa))
