@@ -94,7 +94,6 @@ sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",[
            ["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div//h1","//div//p","//div[@class=`dateNote`]"]]
            ]
 
-
 #Crea los datos en la base de datos
 for SW in sitiosWeb:
     cur.execute(f"INSERT INTO MedioPrensa(NombreMedioPrensa,AñoFundacion,Cobertura) VALUES('{SW[0]}','{SW[1]}','{SW[2]}')")
