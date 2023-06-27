@@ -10,7 +10,7 @@ Página Siete:
 	["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]]
 
 El Deber:
-	Nombre:
+	Nombre: aaa
 	Año de creacion:
 	url:
 	cobertura:
