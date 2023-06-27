@@ -1,11 +1,13 @@
 import mariadb
 import sys
+#! insert.py crea la base de datos y las tablas correspondientes, tambien agrega la informacion inicial (a travez de un arreglo o input)
+#! se uso aaron-bond.better-comments extension que resalta comentarios (no afecta al codigo, solo afecta como se ven los comentarios)
 
-#Conecta a mariadb
+#* Conecta a mariadb
 try:
     conn = mariadb.connect(
         user="root",
-        password="pegasus",
+        password="pegasus", #! Cambiar la password a la correspondiente del computador
         host="127.0.0.1",
         port=3306
     )
@@ -16,14 +18,14 @@ except mariadb.Error as e:
 
 cur = conn.cursor()    
 
-### Dropear la base de datos ###
+#* Dropear la base de datos si existe
 cur.execute("DROP DATABASE IF EXISTS Medios_Prensa")
 
-### Create base de datos ###
+#* Create base de datos 
 cur.execute("CREATE DATABASE Medios_Prensa")
 cur.execute("USE Medios_Prensa")
 
-#Tablas
+#* Crear las tablas (los \ permiten escribir en distintas lineas para leer mejor)
 #Ubicacion(PK_(Ciudad,Region,Pais),Continente)
 cur.execute("CREATE TABLE Ubicacion( \
             Ciudad VARCHAR(225), \
@@ -88,13 +90,14 @@ cur.execute("CREATE TABLE Fundado( \
             FOREIGN KEY(NombreMedioPrensa) REFERENCES MedioPrensa(NombreMedioPrensa), \
             FOREIGN KEY(FundadorID) REFERENCES Fundador(FundadorID))")
 
-#Sitios web para cargar altiro en la base de datos, sigue la estructura
-#NombreSitioWeb,AñoFundacion,Cobertura,LinkSW,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha) Cuidado con el tipo de coma `` o ""
+#* Sitios web para cargar altiro en la base de datos, sigue la estructura
+#  NombreSitioWeb,AñoFundacion,Cobertura,LinkSW,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha) Cuidado con el tipo de coma `` o ""
+#! Asegurarse que los xpath para titulo y fecha entregen 1 solo elemento
 sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]],
-           ["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div//h1","//div//p","//div[@class=`dateNote`]"]]
+           ["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div[@class=`heading heading-gallery`]//h1","//div//p","//div[@class=`dateNote`]"]]
            ]
 
-#Crea los datos en la base de datos
+#* Insertar los datos que esten en sitiosWeb
 for SW in sitiosWeb:
     cur.execute(f"INSERT INTO MedioPrensa(NombreMedioPrensa,AñoFundacion,Cobertura) VALUES('{SW[0]}','{SW[1]}','{SW[2]}')")
     cur.execute(f"INSERT INTO SitioWeb(LinkSitioWeb,NombreMedioPrensa) VALUES('{SW[3]}','{SW[0]}')")
@@ -102,12 +105,14 @@ for SW in sitiosWeb:
         Link=SW[3]+SW[4][i]
         cur.execute(f"INSERT INTO Pagina(LinkPagina,XPATHLinksNoticias,XPATHTitulo,XPATHContenido,XPATHFecha,LinkSitioWeb) VALUES('{Link}','{SW[5][0]}','{SW[5][1]}','{SW[5][2]}','{SW[5][3]}','{SW[3]}')")
 
+#* Codigo para insertar de manera manual
+#! Requiere indicar NombreSitioWeb,AñoFundacion,Cobertura,LinkSitioWeb,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha)
+
 #NombreMedioPrensa, LinkPaginaPrincipal = input("Ingrese el Nombre y Link de la pagina del Medio de prensa(Separados por ','): ").split(",")
 #print("Nombre Medio Prensa : {} ".format(NombreMedioPrensa))
 #print("Link : {} ".format(LinkPaginaPrincipal))
 
 #Nombre, Ciudad ,Region ,Pais , Continente ,Año de creacion del MP crear el elemento en la base de datos
-
 
 conn.commit() 
 conn.close()

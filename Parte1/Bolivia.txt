@@ -5,35 +5,44 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	Año de creación: 2010
 	URL: https://www.paginasiete.bo/
 	Cobertura : Internacional
-	Categoría : ["nacional", "seguridad", "economía"]
+	Categoría : ["nacional", "seguridad", "economia"]
 	Xpath : ["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]
 	
-	Dejarlo en este formato (con las mismas comillas) `` ""
+	Formato:
 	["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]]
 
 2.
-	Nombre: El Deber
+	Nombre: ElDeber
 	Año de creación: 2000
 	URL: https://www.eldeber.com.bo/
 	Cobertura: Internacional
-	Categoría: ["santa cruz", "economía", "mundo"]
-	Xpath: 
+	Categoría: ["santa cruz", "economia", "mundo"]
+	xpath: ["//div//a[@class=`nota-link`]/@href","//div[@class=`heading heading-gallery`]//h1","//div//p","//div[@class=`dateNote`]"]
+
+	Formato:
+	["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div[@class=`heading heading-gallery`]//h1","//div//p","//div[@class=`dateNote`]"]]
 
 3.
 	Nombre: Los Tiempos
 	Año de creación: 1999
 	URL: https://www.lostiempos.com/
 	Cobertura: Internacional
-	Categoría: ["mundo", "país", "economía"]
+	Categoría: ["mundo", "pais", "economia"]
 	xpath: 
 
-4.
-	Nombre: La Razón
-	Año de creación: 2004
-	URL: https://www.la-razon.com/
+	Formato:
+
+
+4. (repetio ^)
+	Nombre: Los Tiempos
+	Año de creación: 1999
+	URL: https://www.lostiempos.com/
 	Cobertura: Internacional
-	Categoría: ["nacional", "mundo", "economía"]
-	Xpath: 
+	Categoría: ["mundo", "pais", "economia"]
+	xpath: 
+
+	Formato:
+	
 
 5.
 	Nombre: El Diario
@@ -41,23 +50,35 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://www.eldiario.net/
 	Cobertura: Internacional
 	Categoría: ["nacional", "deportes", "internacional"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 6.
 	Nombre: Opinión
 	Año de creación: 2006
 	URL: https://www.opinion.com.bo/
 	Cobertura: Internacional
-	Categoría: ["país", "policial", "mundo"]
-	Xpath: 
+	Categoría: ["blog/section/pais", "blog/section/policial", "blog/section/mundo"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 7.
 	Nombre: Erbol
 	Año de creación: 2003
 	URL: https://www.erbol.com.bo/
 	Cobertura: Internacional
-	Categoría: ["seguridad", "mundo", "economía"]
-	Xpath: 
+	Categoría: ["seguridad", "mundo", "economia"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 8.
 	Nombre: El País
@@ -65,7 +86,11 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://elpais.bo/
 	Cobertura: Internacional
 	Categoría: ["nacional", "internacional", "reportajes"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 9.
 	Nombre: El Potosí
@@ -73,7 +98,11 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://elpotosi.net/
 	Cobertura: Internacional
 	Categoría: ["local", "nacional", "mundo"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 10.
 	Nombre: El Mundo
@@ -81,79 +110,119 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://elmundo.com.bo/
 	Cobertura: Internacional
 	Categoría: ["nacional", "policial", "internacional"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 11.
 	Nombre: El Día
 	Año de creación: 1996
 	URL: https://www.eldia.com.bo/
 	Cobertura: Internacional
-	Categoría: ["política", "economía", "nacional"]
-	Xpath: 
+	Categoría: ["politica", "economia", "nacional"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 12.
 	Nombre: La Época
 	Año de creación: 2002
 	URL: https://la-epoca.com.bo/
 	Cobertura: Internacional
-	Categoría: ["opinión", "economía", "cultura"]
-	Xpath: 
+	Categoría: ["opinion", "economia", "cultura"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 13.
 	Nombre: Brújula Digital
 	Año de creación: 2008
 	URL: https://www.brujuladigital.net/
 	Cobertura: Internacional
-	Categoría: ["política", "economía", "sociedad"]
-	Xpath: 
+	Categoría: ["politica", "economia", "sociedad"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 14.
 	Nombre: La Región
 	Año de creación: 2012
 	URL: https://www.laregion.bo/
 	Cobertura: Nacional
-	Categoría: ["medioambiente", "turismo y cultura", "pueblos indígenas"]
-	Xpath: 
+	Categoría: ["medioambiente", "turismo y cultura", "pueblos indigenas"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 15.
 	Nombre: Correo del Sur
 	Año de creación: 2001
 	URL: https://correodelsur.com/
 	Cobertura: Internacional
-	Categoría: ["política", "seguridad", "sociedad"]
-	Xpath: 
+	Categoría: ["politica", "seguridad", "sociedad"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 16.
 	Nombre: La Patria
 	Año de creación: 2007
 	URL: https://www.lapatria.bo/
 	Cobertura: Internacional
-	Categoría: ["bolivia", "deportes", "política"]
-	Xpath: 
+	Categoría: ["bolivia", "deportes", "politica"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 17.
 	Nombre: El Fulgor
 	Año de creación: 2021
 	URL: http://elfulgor.com/
 	Cobertura: Internacional
-	Categoría: ["seguridad", "economía", "cultural"]
-	Xpath: 
+	Categoría: ["seguridad", "economia", "cultural"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 18.
 	Nombre: La Voz de Tarija
 	Año de creación: 2016
 	URL: https://lavozdetarija.com/
 	Cobertura: Internacional
-	Categoría: ["bolivia", "mundo", "tecnología"]
-	Xpath: 
+	Categoría: ["bolivia", "mundo", "tecnologia"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *19.
 	Nombre: El País (Bolivia)
 	Año de creación: 1996
 	URL: https://elpais.com/noticias/bolivia/
 	Cobertura: Internacional
-	Categoría: ["opinión", "sociedad", "economía"]
-	Xpath: 
+	Categoría: ["opinion", "sociedad", "economia"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *20.
 	Nombre: CNN
@@ -161,39 +230,59 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://cnnespanol.cnn.com/category/zona-andina/bolivia/
 	Cobertura: Internacional
 	Categoría: ["mundo", "negocios", "entretenimiento"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 *21.
 	Nombre: Eitb
 	Año de creación: 1996
 	URL: https://www.eitb.eus/es/tag/bolivia/
 	Cobertura:
-	Categoría: ["noticias", "deportes", "televisión"]
-	Xpath: 
+	Categoría: ["noticias", "deportes", "television"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *22.
 	Nombre: El Comercio
 	Año de creación: 1996
 	URL: https://elcomercio.pe/noticias/bolivia/
 	Cobertura: Internacional
-	Categoría: ["lo último", "política", "mundo"]
-	Xpath: 
+	Categoría: ["lo ultimo", "politica", "mundo"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *23.
 	Nombre: La Nación
 	Año de creación: 1995
 	URL: https://www.lanacion.com.ar/tema/bolivia-tid182/
 	Cobertura: Internacional
-	Categoría: ["política", "economía", "sociedad"]
-	Xpath: 
+	Categoría: ["politica", "economia", "sociedad"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *24.
 	Nombre: Infobae (Bolivia)
 	Año de creación: 2002
 	URL: https://www.infobae.com/tag/bolivia/
 	Cobertura: Internacional
-	Categoría: ["mundo", "últimas noticias", "deportes"]
-	Xpath: 
+	Categoría: ["mundo", "ultimas noticias", "deportes"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *25.
 	Nombre: 20 Minutos
@@ -201,7 +290,11 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://www.20minutos.es/minuteca/bolivia/
 	Cobertura: Internacional
 	Categoría: ["nacional", "internacional", "deportes"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 *26.
 	Nombre: Gestión
@@ -209,7 +302,11 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://gestion.pe/noticias/bolivia/
 	Cobertura: Internacional
 	Categoría: ["newsletters", "empresas", "tendencias"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 27.
 	Nombre: Bolivia TV
@@ -217,31 +314,47 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://www.boliviatv.bo/principal/
 	Cobertura: Nacional
 	Categoría: ["noticias", "programas", "transparencia"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 28.
 	Nombre: Eju!
 	Año de creación: 2000
 	URL: https://eju.tv
 	Cobertura: Nacional
-	Categoría: ["economía", "deportes", "política"]
-	Xpath: 
+	Categoría: ["economia", "deportes", "politica"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *29.
 	Nombre: EuropaPress
 	Año de creación: 1996
 	URL: https://www.europapress.es/temas/bolivia/
 	Cobertura: Internacional
-	Categoría: ["nacional", "internacional", "economía"]
-	Xpath: 
+	Categoría: ["nacional", "internacional", "economia"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *30.
 	Nombre: Público 
 	Año de creación: 2007
 	URL: https://www.publico.es/tag/bolivia
 	Cobertura: Internacional
-	Categoría: ["política", "opinión", "clima"]
-	Xpath: 
+	Categoría: ["politica", "opinion", "clima"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 31.
 	Nombre: WCS Bolivia
@@ -249,23 +362,35 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://bolivia.wcs.org/es-es/Recursos-Informativos/Sala-de-noticias.aspx
 	Cobertura: Nacional
 	Categoría: ["recursos informativos", "paisajes", "especies"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 *32.
 	Nombre: La Sexta
 	Año de creación: 2006
 	URL: https://www.lasexta.com/temas/bolivia-1
 	Cobertura: Internacional
-	Categoría: ["deportes", "internacional", "ciencia y tecnología"]
-	Xpath: 
+	Categoría: ["deportes", "internacional", "ciencia y tecnologia"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *33.
 	Nombre: El Tiempo
 	Año de creación: 1995
 	URL: https://www.eltiempo.com/noticias/bolivia
 	Cobertura: Internacional
-	Categoría: ["internacional", "política", "justicia"]
-	Xpath: 
+	Categoría: ["internacional", "politica", "justicia"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *34.
 	Nombre: El Periódico
@@ -273,7 +398,11 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://www.elperiodico.com/es/lugares/bolivia-7331
 	Cobertura: Internacional
 	Categoría: ["rusia-ucrania", "elecciones francia", "estados unidos"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 35.
 	Nombre: Ministerio de Salud y Deportes
@@ -281,7 +410,11 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	URL: https://www.minsalud.gob.bo
 	Cobertura: Nacional
 	Categoría: ["institucional", "transparencia", "prensa"]
-	Xpath: 
+	xpath: 
+
+	Formato:
+	
+ 
 
 
 36.
@@ -289,40 +422,60 @@ PÁGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAÍS 
 	Año de creación: 2000
 	URL: https://www.noticiasfides.com
 	Cobertura: Internacional
-	Categoría: ["economía", "deportes", "cúltura y farándula"]
-	Xpath: 
+	Categoría: ["economia", "deportes", "cultura y farandula"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 ***37.
 	Nombre: El Universo
 	Año de creación: 1996
 	URL: https://www.eluniverso.com/temas/bolivia/
 	Cobertura: Internacional
-	Categoría: ["noticias", "opinión", "entretenimiento"]
-	Xpath: 
+	Categoría: ["noticias", "opinion", "entretenimiento"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *38.
 	Nombre: Ámbito
 	Año de creación: 1995
 	URL: https://www.ambito.com/bolivia-a5123323
 	Cobertura: Internacional
-	Categoría: ["dólar", "economía", "finanzas"]
-	Xpath: 
+	Categoría: ["dolar", "economia", "finanzas"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 *39.
 	Nombre: Clarín
 	Año de creación: 1996
 	URL: https://www.clarin.com/tema/bolivia.html
 	Cobertura: Internacional 
-	Categoría: ["último momento", "política", "sociedad"]
-	Xpath: 
+	Categoría: ["ultimo momento", "politica", "sociedad"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 ***40.
 	Nombre: Redgol
 	Año de creación: 2013
 	URL: https://redgol.cl/tema/seleccion-bolivia
 	Cobertura: Internacional
-	Categoría: ["últimas noticias", "agenda", "redsport"]
-	Xpath: 
+	Categoría: ["ultimas noticias", "agenda", "redsport"]
+	xpath: 
+
+	Formato:
+	
+ 
 
 
 

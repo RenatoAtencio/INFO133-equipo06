@@ -1,4 +1,3 @@
-#crawling.py saca los link de la pagina y recolecta todos las noticias por cada una de esas paginas, luego las inserta en la tabla noticia
 import random
 from requests_html import HTMLSession
 import w3lib.html
@@ -6,6 +5,8 @@ import html
 import mariadb
 import sys
 import time
+#! crawling.py toma los links de los sitios web y sus categorias y recorre esas paginas en busca de los links para las noticias
+#! luego inserta esos links en la tabla noticia
 
 session = HTMLSession()
 USER_AGENT_LIST = [
@@ -42,23 +43,22 @@ except mariadb.Error as e:
     print(f"Error connecting to MariaDB Platform: {e}")
     sys.exit(1)
 
+#* LinkPaginas toma los links de las paginas por categoria, XPATHs toma los xpaths para tomar los links a las noticias 
 cur = conn.cursor()
 cur.execute("SELECT LinkPagina FROM Pagina")
-#Arreglo con todos los link de las paginas de noticia(hay 3 link por pagina, cada link corresponde a una categoria)
 LinkPaginas = cur.fetchall()
 cur.execute("SELECT XPATHLinksNoticias FROM Pagina")
 XPATHs=cur.fetchall()
 
-#La manera en la cual esta haciendo el fech de datos es al reves de como se ingresaron, en insert.py se agrego paginaSiete primero pero aca es el ultimo elemento
-
+#* Toma el link de una pagina con su respectivo xpath para tomas los links de las noticias
 for i in range(0,len(LinkPaginas)):
     URL_Seed = LinkPaginas[i][0]
     response = session.get("{}".format(URL_Seed),headers=headers)
     xpath = XPATHs[i][0].replace("`","'")
-    #Arreglo de links de noticias para la pagina y categoria correspondiente
     linkNoticias = response.html.xpath(xpath)
     for linkN in linkNoticias:
         cur.execute(f"INSERT INTO Noticia(LinkNoticia,LinkPagina) VALUES ('{linkN}','{URL_Seed}')")
 
-#no olvidar los commit, esto actualiza la base de datos, sin esto no te aparecen los datos ingresados en el codigo en la base de datos
+#! no olvidar los commit, esto actualiza la base de datos (en mariadb), sin esto no te aparecen los datos ingresados en el codigo en la base de datos
 conn.commit()
+conn.close()
