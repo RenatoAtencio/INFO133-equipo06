@@ -1,17 +1,29 @@
 Página Siete:
-	URL: https://www.paginasiete.bo/
-	Nombre: Página SIETE
-	Ciudad: La paz
-	Region: La paz
-	Pais: Bolivia
-	Continente: Sur America
+	Nombre: PaginaSiete
 	Año de creacion: 2010
+	URL: https://www.paginasiete.bo/
+	cobertura : Internacional
+	categoria : ["nacional","seguridad","economia"]
+	xpath : ["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]
+	
+	Dejarlo en este formato (con las mismas comillas) `` ""
+	["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]]
 
 El Deber:
-URL: https://www.eldeber.com.bo/
+	Nombre:
+	Año de creacion:
+	url:
+	cobertura:
+	categoria:
+	xpath: 
 
 Los Tiempos:
-URL: https://www.lostiempos.com/
+	Nombre:
+	Año de creacion:
+	url: https://www.lostiempos.com/
+	cobertura:
+	categoria:
+	xpath: 
 
 La Razón:
 URL: https://www.la-razon.com/
