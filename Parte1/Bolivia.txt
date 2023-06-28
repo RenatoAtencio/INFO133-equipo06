@@ -27,18 +27,18 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	Año de creacion: 1999
 	URL: https://www.lostiempos.com/
 	Cobertura: Internacional
-	Categoria: ["mundo", "pais", "economia"]
-	xpath: 
+	Categoria: ["actualidad/mundo", "actualidad/pais", "actualidad/economia"]
+	xpath: ["//div[@class=`panels-flexible-row panels-flexible-row-sub_home_layout-3 clearfix `]//a/@href","//h1[@class=`node-title`]","//div[@class=`body`//p]","//div[@class=`date-publish`]"]
 
 	Formato:
-
+	["LosTiempos","1999","Internacional","https://www.lostiempos.com/",["actualidad/mundo", "actualidad/pais", "actualidad/economia"],["//div[@class=`panels-flexible-row panels-flexible-row-sub_home_layout-3 clearfix `]//a/@href","//h1[@class=`node-title`]","//div[@class=`body`//p]","//div[@class=`date-publish`]"]]
 
 4. (repetio ^)
-	Nombre: Los Tiempos
-	Año de creacion: 1999
-	URL: https://www.lostiempos.com/
-	Cobertura: Internacional
-	Categoria: ["mundo", "pais", "economia"]
+	Nombre: 
+	Año de creacion: 
+	URL: 
+	Cobertura: 
+	Categoria:
 	xpath: 
 
 	Formato:
@@ -47,14 +47,14 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 5.
 	Nombre: El Diario
 	Año de creacion: 2014
-	URL: https://www.eldiario.net/
+	URL: https://www.eldiario.net/portal/
 	Cobertura: Internacional
-	Categoria: ["nacional", "deportes", "internacional"]
+	Categoria: ["category/nacional", "category/deportes", "category/internacional"]
 	xpath: 
 
 	Formato:
-	
- 
+	["ElDiario","2014","Internacional","https://www.eldiario.net/",["category/nacional", "category/deportes", "category/internacional"],["//div[@class=`jeg_main_content jeg_column col-sm-8`]//h3[@class=`jeg_post_title`]//a/@href","//div[@class=`entry-header`]//h1 ","//div[@class=`content-inner `]","//div[@class=`jeg_meta_date`]"]]
+	#! de la forma como esta hecho el codigo este no sirve, los links a las noticias contienen toda la cadena de https://www.eldiario.net/ de antemano
 
 6.
 	Nombre: Opinion

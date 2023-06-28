@@ -93,9 +93,11 @@ cur.execute("CREATE TABLE Fundado( \
 #* Sitios web para cargar altiro en la base de datos, sigue la estructura
 #  NombreSitioWeb,AñoFundacion,Cobertura,LinkSW,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha) Cuidado con el tipo de coma `` o ""
 #! Asegurarse que los xpath para titulo y fecha entregen 1 solo elemento
-sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]],
-           ["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div[@class=`heading heading-gallery`]//h1","//div//p","//div[@class=`dateNote`]"]]
-           ]
+sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]]
+           ,["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div[@class=`heading heading-gallery`]//h1","//div//p","//div[@class=`dateNote`]"]]
+           ,["LosTiempos","1999","Internacional","https://www.lostiempos.com/",["actualidad/mundo", "actualidad/pais", "actualidad/economia"],["//div[@class=`inside panels-flexible-row-inside panels-flexible-row-sub_home_layout-3-inside clearfix`]//div[@class=`views-field-title term-[tid]`]//a/@href","//h1[@class=`node-title`]","//div[@class=`body`//p]","//div[@class=`date-publish`]"]]
+#           ,["ElDiario","2014","Internacional","https://www.eldiario.net/portal/",["category/nacional", "category/deportes", "category/internacional"],["//div[@class=`jeg_main_content jeg_column col-sm-8`]//h3[@class=`jeg_post_title`]//a/@href","//h1[@class=`jeg_post_title`]","//div[@class=`content-inner `]","//div[@class=`jeg_meta_date`]"]]
+           ,]
 
 #* Insertar los datos que esten en sitiosWeb
 for SW in sitiosWeb:

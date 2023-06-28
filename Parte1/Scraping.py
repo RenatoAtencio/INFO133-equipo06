@@ -54,6 +54,8 @@ xpaths=cur.fetchall()
 #* esto se hace ya que al recopilar los links de las noticias nos daban el link completo con un \ al comienzo, asi que se quita uno para que no nos queden links con \\
 for i in range(0,len(Links)):
     URL_Seed = Links[i][0][:-1] + Links[i][1]
+    # print(Links[i][0][:-1])
+    # print("###" + Links[i][1])
     response = session.get("{}".format(URL_Seed),headers=headers)
     xpathTitulo = xpaths[i][2].replace("`","'")
     xpathFecha = xpaths[i][1].replace("`","'")

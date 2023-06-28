@@ -57,7 +57,7 @@ for i in range(0,len(LinkPaginas)):
     xpath = XPATHs[i][0].replace("`","'")
     linkNoticias = response.html.xpath(xpath)
     for linkN in linkNoticias:
-        cur.execute(f"INSERT INTO Noticia(LinkNoticia,LinkPagina) VALUES ('{linkN}','{URL_Seed}')")
+        cur.execute(f"INSERT IGNORE INTO Noticia(LinkNoticia,LinkPagina) VALUES ('{linkN}','{URL_Seed}')")
 
 #! no olvidar los commit, esto actualiza la base de datos (en mariadb), sin esto no te aparecen los datos ingresados en el codigo en la base de datos
 conn.commit()
