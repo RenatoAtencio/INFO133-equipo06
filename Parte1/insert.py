@@ -101,23 +101,41 @@ sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",[
             ,["Erbol","2003","Internacional","https://www.erbol.com.bo/",["seguridad","mundo","economia"],['''//section[@class="col-sm-8"]//div[@class="field-content"]//a/@href''','''//section[@class="col-sm-8"]//div[@property="dc:title"]//h2''','''//section[@class="col-sm-8"]//div[@property="content:encoded"]//p''','''//section[@class="col-sm-8"]//div[@class="field-item even"]''']]
             ,]
 
-# #* Codigo para insertar de manera manual
-# #! Requiere indicar NombreSitioWeb,AñoFundacion,Cobertura,LinkSitioWeb,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha)
+#* Codigo para insertar de manera manual
+#! Requiere indicar NombreSitioWeb,AñoFundacion,Cobertura,LinkSitioWeb,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha)
+#  Muy probable que falle, no probamos todos los casos.
 
-# nombre, fecha, cobertura, link = input ("Ingrese el Nombre,Año de fundacion, Cobertura y Link de la pagina del Medio de prensa, separados por ',' : ").split(",")
-# categorias=[]
-# print("Ingrese 3 categorias de la pagina web")
-# while len(categorias) != 3:
-#     cat = input("Ingrese: ")
-#     categorias.append(cat)
-# Xpaths = []
-# print("Ingrese xpaths para conseguir los links de las noticias en las paginas de la categoria, el titulo, contenido y fecha de la noticia")
-# while len(Xpaths) != 4:
-#     xpath = input("Ingrese: ")
-#     Xpaths.append(xpath)
+# agregar = "s"
+# while agregar != "n":
+#     reingresar = "n"
+#     while reingresar != "s":
+#         nombre, fecha, cobertura, link = input ("Ingrese el Nombre, Año de fundacion, Cobertura y Link de la pagina del Medio de prensa, separados por ',' : ").split(",")
+#         print(nombre, fecha, cobertura, link)
+#         reingresar = input("Son estos datos correctos? (s/n): ")
 
-# medioPrensa = [nombre, fecha, cobertura, link,categorias,Xpaths]
-# print(medioPrensa)
+#     categorias=[]
+#     print("Ingrese 3 categorias de la pagina web")
+#     while len(categorias) != 3:
+#         reingresar = "n"
+#         while reingresar.lower() != "s":
+#             cat = input("Ingrese Categoria (de manear que al combinarla con el link del medio de prensa se llegue a la pagina de la categoria): ")
+#             print(cat)
+#             reingresar = input("Esta bien escrita la categoria? (s/n): ")
+#         categorias.append(cat)
+
+#     Xpaths = []
+#     print("Ingrese XPATHs para conseguir los links de las noticias en las paginas de la categoria, el titulo, contenido y fecha de la noticia (en este orden)")
+#     while len(Xpaths) != 4:
+#         reingresar = "n"
+#         while reingresar.lower() != "s":
+#             xpath = input("Ingrese el XPATH: ")
+#             print(xpath)
+#             reingresar = input("Esta bien escrito el XPATH? (s/n): ")
+#         Xpaths.append(xpath)
+
+#     medioPrensa = [nombre, fecha, cobertura, link,categorias,Xpaths]
+#     sitiosWeb.append(medioPrensa)
+#     agregar = input("Agregar otro medio de prensa? (s/n): ")
 
 #* Insertar los datos que esten en sitiosWeb
 for SW in sitiosWeb:
@@ -125,7 +143,11 @@ for SW in sitiosWeb:
     cur.execute(f"INSERT INTO SitioWeb(LinkSitioWeb,NombreMedioPrensa) VALUES('{SW[3]}','{SW[0]}')")
     for i in range(0,3):
         Link=SW[3]+SW[4][i]
-        cur.execute(f"INSERT INTO Pagina(LinkPagina,XPATHLinksNoticias,XPATHTitulo,XPATHContenido,XPATHFecha,LinkSitioWeb) VALUES('{Link}','{SW[5][0]}','{SW[5][1]}','{SW[5][2]}','{SW[5][3]}','{SW[3]}')")
-
+        try:
+            cur.execute(f"INSERT INTO Pagina(LinkPagina,XPATHLinksNoticias,XPATHTitulo,XPATHContenido,XPATHFecha,LinkSitioWeb) VALUES('{Link}','{SW[5][0]}','{SW[5][1]}','{SW[5][2]}','{SW[5][3]}','{SW[3]}')")
+        except mariadb.Error as e:
+            print(f"Error Agregando un medio prensa: {e}")
+            sys.exit(1)
+            
 conn.commit() 
 conn.close()

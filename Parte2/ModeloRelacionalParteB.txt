@@ -1,5 +1,0 @@
-Pais(PK_NombrePais)
-Region(PK_NombreRegion)
-Comuna(PK_ComunaID,NombreComuna,Superficie,Poblacion,PosiblesTrabajadores,TrabajadoresM,TrabajadoresF)
-Establecimiento(PK_EstablecimientoID,NombreEstablecimiento,FK_ComunaID,FK_TipoID)
-Tipo(PK_TipoID,Descripcion)

@@ -1,35 +1,7 @@
-import random
-from requests_html import HTMLSession
-import w3lib.html
-import html
 import mariadb
 import sys
-import time
 #! read.py permite realizar consultas a la base de datos
 #! tiene un arreglo donde uno le puede poner las consultas o puede hacerse a travez de un input del usuario
-
-session = HTMLSession()
-USER_AGENT_LIST = [
-        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1",
-        "Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11",
-        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6",
-        "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6",
-        "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1",
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5",
-        "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5",
-        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3",
-        "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3",
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3",
-        "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3",
-        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3",
-        "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3",
-        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3",
-        "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3",
-        "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3",
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24",
-        "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"
-]
-headers = {'user-agent':random.choice(USER_AGENT_LIST) }
 
 try:
     conn = mariadb.connect(
@@ -43,20 +15,40 @@ except mariadb.Error as e:
     print(f"Error connecting to MariaDB Platform: {e}")
     sys.exit(1)
 
-consultas = [["SELECT Linkpagina, count(*) FROM Noticia GROUP BY Linkpagina"],
-             ["SELECT xpathfecha,linksitioweb FROM pagina WHERE linksitioweb LIKE '%eldeber%' GROUP BY linksitioweb"]]
+# arreglo de consultas
+Consultas = [["SELECT Linkpagina, count(*) FROM Noticia GROUP BY Linkpagina"]
+            ,["SELECT xpathfecha,linksitioweb FROM pagina WHERE linksitioweb LIKE '%eldeber%' GROUP BY linksitioweb"]
+            ,]
 
-#* para ir por el arreglo consultas
+#* Hace las consultas presentes en el arreglo
 cur = conn.cursor()
-for consulta in consultas:
+for consulta in Consultas:
     cur.execute(consulta[0])
     resultado = cur.fetchall()
-    for r in resultado:
-        print(r)
+    for elem in resultado:
+        print(" | ".join(str(atrib) for atrib in elem))
+    #Para diferenciar entre consultas
+    print("#######################")
 
 #* input de usuario
-cosulta = input("Cual es tu consulta?: ")
-cur.execute(consulta[0])
-resultado = cur.fetchall()
-for r in resultado:
-    print(r)
+seguir = True
+while seguir:
+    consulta = input("Cual es tu consulta?: ")
+    print(consulta)
+    repetir = input("Es esta consulta correcta? (s/n): ")
+    while repetir.lower() != "s":
+        cosulta = input("Cual es tu consulta?: ")
+        repetir = input("Es esta consulta correcta? (s/n): ")
+
+    try:
+        cur.execute(consulta)
+        resultado = cur.fetchall()
+        for elem in resultado:
+            print(" | ".join(str(atrib) for atrib in elem))
+    except mariadb.Error as error:
+        print(f"Consulta Invalida: {error}")
+        sys.exit(1)
+
+    continuar = input("Quieres hacer otra consulta? (s/n): ")
+    if continuar.lower() == "n":
+        seguir = False
