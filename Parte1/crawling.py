@@ -54,10 +54,14 @@ XPATHs=cur.fetchall()
 for i in range(0,len(LinkPaginas)):
     URL_Seed = LinkPaginas[i][0]
     response = session.get("{}".format(URL_Seed),headers=headers)
-    xpath = XPATHs[i][0].replace("`","'")
+    xpath = XPATHs[i][0]
     linkNoticias = response.html.xpath(xpath)
-    for linkN in linkNoticias:
-        cur.execute(f"INSERT IGNORE INTO Noticia(LinkNoticia,LinkPagina) VALUES ('{linkN}','{URL_Seed}')")
+    # Solo si LinkNoticias tiene elementos
+    # print("####" + URL_Seed + "####")
+    if linkNoticias:
+        for linkN in linkNoticias:
+            # print(linkN)
+            cur.execute(f"INSERT IGNORE INTO Noticia(LinkNoticia,LinkPagina) VALUES ('{linkN}','{URL_Seed}')")
 
 #! no olvidar los commit, esto actualiza la base de datos (en mariadb), sin esto no te aparecen los datos ingresados en el codigo en la base de datos
 conn.commit()

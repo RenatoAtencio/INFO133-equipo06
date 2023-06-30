@@ -93,11 +93,31 @@ cur.execute("CREATE TABLE Fundado( \
 #* Sitios web para cargar altiro en la base de datos, sigue la estructura
 #  NombreSitioWeb,AñoFundacion,Cobertura,LinkSW,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha) Cuidado con el tipo de coma `` o ""
 #! Asegurarse que los xpath para titulo y fecha entregen 1 solo elemento
-sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],["//div[@class=`headline`]//a/@href","//div//h1","//div[@class=`paragraph texto`]//p","//div[@class=`date`]"]]
-           ,["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div[@class=`heading heading-gallery`]//h1","//div//p","//div[@class=`dateNote`]"]]
-           ,["LosTiempos","1999","Internacional","https://www.lostiempos.com/",["actualidad/mundo", "actualidad/pais", "actualidad/economia"],["//div[@class=`inside panels-flexible-row-inside panels-flexible-row-sub_home_layout-3-inside clearfix`]//div[@class=`views-field-title term-[tid]`]//a/@href","//h1[@class=`node-title`]","//div[@class=`body`//p]","//div[@class=`date-publish`]"]]
-#           ,["ElDiario","2014","Internacional","https://www.eldiario.net/portal/",["category/nacional", "category/deportes", "category/internacional"],["//div[@class=`jeg_main_content jeg_column col-sm-8`]//h3[@class=`jeg_post_title`]//a/@href","//h1[@class=`jeg_post_title`]","//div[@class=`content-inner `]","//div[@class=`jeg_meta_date`]"]]
-           ,]
+sitiosWeb=[["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],['''//div[@class="headline"]//a/@href''','''//div//h1''','''//div[@class="paragraph texto"]//p''','''//div[@class="date"]''']]
+            ,["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],['''//div//a[@class="nota-link"]/@href''','''//div[@class="heading heading-gallery"]//h1''','''//div//p''','''//div[@class="dateNote"]''']]
+            ,["LosTiempos","1999","Internacional","https://www.lostiempos.com/",["actualidad/mundo", "actualidad/pais", "actualidad/economia"],['''//div[@class="inside panels-flexible-row-inside panels-flexible-row-sub_home_layout-3-inside clearfix"]//div[@class="views-field-title term-[tid]"]//a/@href''','''//h1[@class="node-title"]''','''//div[@class="body"]//p''','''//div[@class="date-publish"]''']]
+            # ,["ElDiario","2014","Internacional","https://www.eldiario.net/portal/",["category/nacional", "category/deportes", "category/internacional"],['''//div[@class="jeg_main_content jeg_column col-sm-8"]//h3[@class="jeg_post_title"]//a/@href''','''//h1[@class="jeg_post_title"]''','''//div[@class="content-inner "]''','''//div[@class="jeg_meta_date"]''']]
+            ,["Opinion","2006","Internacional","https://www.opinion.com.bo/",["blog/section/pais", "blog/section/policial", "blog/section/mundo"],['''//div[@class="article-data"]//h2//a/@href''','''//h2[@class="title"]''','''//div[@class="content-body inner-article-data col-md-10 col-sm-12 col-ms-12"]//div[contains(@class,"body")]//p''','''//span[@class="content-time"]''']]
+            ,["Erbol","2003","Internacional","https://www.erbol.com.bo/",["seguridad","mundo","economia"],['''//section[@class="col-sm-8"]//div[@class="field-content"]//a/@href''','''//section[@class="col-sm-8"]//div[@property="dc:title"]//h2''','''//section[@class="col-sm-8"]//div[@property="content:encoded"]//p''','''//section[@class="col-sm-8"]//div[@class="field-item even"]''']]
+            ,]
+
+# #* Codigo para insertar de manera manual
+# #! Requiere indicar NombreSitioWeb,AñoFundacion,Cobertura,LinkSitioWeb,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha)
+
+# nombre, fecha, cobertura, link = input ("Ingrese el Nombre,Año de fundacion, Cobertura y Link de la pagina del Medio de prensa, separados por ',' : ").split(",")
+# categorias=[]
+# print("Ingrese 3 categorias de la pagina web")
+# while len(categorias) != 3:
+#     cat = input("Ingrese: ")
+#     categorias.append(cat)
+# Xpaths = []
+# print("Ingrese xpaths para conseguir los links de las noticias en las paginas de la categoria, el titulo, contenido y fecha de la noticia")
+# while len(Xpaths) != 4:
+#     xpath = input("Ingrese: ")
+#     Xpaths.append(xpath)
+
+# medioPrensa = [nombre, fecha, cobertura, link,categorias,Xpaths]
+# print(medioPrensa)
 
 #* Insertar los datos que esten en sitiosWeb
 for SW in sitiosWeb:
@@ -106,15 +126,6 @@ for SW in sitiosWeb:
     for i in range(0,3):
         Link=SW[3]+SW[4][i]
         cur.execute(f"INSERT INTO Pagina(LinkPagina,XPATHLinksNoticias,XPATHTitulo,XPATHContenido,XPATHFecha,LinkSitioWeb) VALUES('{Link}','{SW[5][0]}','{SW[5][1]}','{SW[5][2]}','{SW[5][3]}','{SW[3]}')")
-
-#* Codigo para insertar de manera manual
-#! Requiere indicar NombreSitioWeb,AñoFundacion,Cobertura,LinkSitioWeb,Categorias(dejar 3 por ahora),XPATH(LinkNoticias,Titulo,Contenido,Fecha)
-
-#NombreMedioPrensa, LinkPaginaPrincipal = input("Ingrese el Nombre y Link de la pagina del Medio de prensa(Separados por ','): ").split(",")
-#print("Nombre Medio Prensa : {} ".format(NombreMedioPrensa))
-#print("Link : {} ".format(LinkPaginaPrincipal))
-
-#Nombre, Ciudad ,Region ,Pais , Continente ,Año de creacion del MP crear el elemento en la base de datos
 
 conn.commit() 
 conn.close()
