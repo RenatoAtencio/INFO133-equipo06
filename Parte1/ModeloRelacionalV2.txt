@@ -1,9 +1,9 @@
 MedioPrensa(PK_NombreMedioPrensa,AñoFundacion,Cobertura,FK_(Ciudad,Region,Pais))
-RedSocial(PK_linkRedSocial,NombreRedSocial,Seguidores,Fecha,FK_NombreMedioPrensa)
+RedSocial(PK_LinkRedSocial,NombreRedSocial,Seguidores,Fecha,FK_NombreMedioPrensa)
 Ubicacion(PK_(Ciudad,Region,Pais),Continente)
 Fundador(PK_FundadorID,Nombre)
 SitioWeb(PK_LinkSitioWeb,FK_NombreMedioPrensa)
-Pagina(PK_LinkPagina,Categoria,XPATHPagina,FK_LinkSitioWeb)
-Noticia(PK_LinkNoticia,XPATHFecha,XPATHContenido,XPATHTitulo,FK_LinkPagina)
+Pagina(PK_LinkPagina,XPATHFecha,XPATHContenido,XPATHTitulo,XPATHLinkNoticias,FK_LinkSitioWeb)
+Noticia(PK_LinkNoticia,Fecha,Contenido,Titulo,FK_LinkPagina)
 
 Fundado(PK_(FK_NombreMedioPrensa,FK_FundadorID))

@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Página-1" id="lxS2CNAL6hp_V3PkIYL_">
-        <mxGraphModel dx="1469" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1047" dy="1425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -93,14 +93,11 @@
                 <mxCell id="jM-bACAt7TGIaR6FnqXF-36" value="Pagina" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF0000;fontSize=19;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="600" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="jM-bACAt7TGIaR6FnqXF-37" value="Categoria" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
+                <mxCell id="jM-bACAt7TGIaR6FnqXF-38" value="Link Pagina" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
                     <mxGeometry x="1120" y="600" width="116" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="jM-bACAt7TGIaR6FnqXF-38" value="Link Pagina" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
+                <mxCell id="jM-bACAt7TGIaR6FnqXF-39" value="XPATH Link Noticia" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
                     <mxGeometry x="1120" y="640" width="116" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="jM-bACAt7TGIaR6FnqXF-39" value="XPATH Pagina" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
-                    <mxGeometry x="1120" y="680" width="116" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="jM-bACAt7TGIaR6FnqXF-40" value="posee" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#FFFF00;" parent="1" vertex="1">
                     <mxGeometry x="1020" y="790" width="60" height="60" as="geometry"/>
@@ -108,13 +105,13 @@
                 <mxCell id="jM-bACAt7TGIaR6FnqXF-41" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Noticia&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF0000;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="920" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="jM-bACAt7TGIaR6FnqXF-42" value="XPATH Fecha" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
+                <mxCell id="jM-bACAt7TGIaR6FnqXF-42" value="Fecha" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
                     <mxGeometry x="1110" y="920" width="116" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="jM-bACAt7TGIaR6FnqXF-43" value="XPATH Contenido" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
+                <mxCell id="jM-bACAt7TGIaR6FnqXF-43" value="Contenido" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
                     <mxGeometry x="1110" y="960" width="116" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="jM-bACAt7TGIaR6FnqXF-44" value="XPATH Titulo" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
+                <mxCell id="jM-bACAt7TGIaR6FnqXF-44" value="Titulo" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
                     <mxGeometry x="1110" y="1000" width="116" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="jM-bACAt7TGIaR6FnqXF-46" value="Link Noticia" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" parent="1" vertex="1">
@@ -378,16 +375,16 @@
                         <mxPoint x="1202" y="190" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="jM-bACAt7TGIaR6FnqXF-129" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="jM-bACAt7TGIaR6FnqXF-36" target="jM-bACAt7TGIaR6FnqXF-37" edge="1">
+                <mxCell id="jM-bACAt7TGIaR6FnqXF-129" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="jM-bACAt7TGIaR6FnqXF-36" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="1140" y="200" as="sourcePoint"/>
-                        <mxPoint x="1212" y="200" as="targetPoint"/>
+                        <mxPoint x="1178" y="600" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="jM-bACAt7TGIaR6FnqXF-130" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="jM-bACAt7TGIaR6FnqXF-36" target="jM-bACAt7TGIaR6FnqXF-39" edge="1">
+                <mxCell id="jM-bACAt7TGIaR6FnqXF-130" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="jM-bACAt7TGIaR6FnqXF-36" target="3" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="1110" y="610" as="sourcePoint"/>
-                        <mxPoint x="1188" y="610" as="targetPoint"/>
+                        <mxPoint x="1120" y="830" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="jM-bACAt7TGIaR6FnqXF-131" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="jM-bACAt7TGIaR6FnqXF-41" target="jM-bACAt7TGIaR6FnqXF-42" edge="1">
@@ -401,6 +398,15 @@
                         <mxPoint x="1110" y="930" as="sourcePoint"/>
                         <mxPoint x="1178" y="930" as="targetPoint"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="XPATH Fecha" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" vertex="1" parent="1">
+                    <mxGeometry x="1120" y="720" width="116" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="XPATH Contenido" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" vertex="1" parent="1">
+                    <mxGeometry x="1120" y="760" width="116" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="XPATH Titulo" style="ellipse;whiteSpace=wrap;html=1;gradientColor=none;strokeColor=#66FFFF;" vertex="1" parent="1">
+                    <mxGeometry x="1120" y="680" width="116" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
