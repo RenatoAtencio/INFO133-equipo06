@@ -11,7 +11,6 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	
 	Formato:
 	["PaginaSiete","2010","Internacional","https://www.paginasiete.bo/",["nacional","seguridad","economia"],['''//div[@class="headline"]//a/@href''','''//div//h1''','''//div[@class="paragraph texto"]//p''','''//div[@class="date"]''']]
- 
 2.
 	Nombre: ElDeber
 	Año de creacion: 2000
@@ -22,7 +21,6 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 
 	Formato:
 	["ElDeber","2016","Internacional","https://eldeber.com.bo/",["pais","economia","mundo"],["//div//a[@class=`nota-link`]/@href","//div[@class=`heading heading-gallery`]//h1","//div//p","//div[@class=`dateNote`]"]]
-
 3.
 	Nombre: Los Tiempos
 	Año de creacion: 1999
@@ -33,7 +31,6 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 
 	Formato:
 	["LosTiempos","1999","Internacional","https://www.lostiempos.com/",["actualidad/mundo", "actualidad/pais", "actualidad/economia"],["//div[@class=`panels-flexible-row panels-flexible-row-sub_home_layout-3 clearfix `]//a/@href","//h1[@class=`node-title`]","//div[@class=`body`//p]","//div[@class=`date-publish`]"]]
-
 4. (repetio ^)
 	Nombre: 
 	Año de creacion: 
@@ -43,8 +40,6 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
-
 5.
 	Nombre: El Diario
 	Año de creacion: 2014
@@ -56,7 +51,6 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	Formato:
 	["ElDiario","2014","Internacional","https://www.eldiario.net/",["category/nacional", "category/deportes", "category/internacional"],["//div[@class=`jeg_main_content jeg_column col-sm-8`]//h3[@class=`jeg_post_title`]//a/@href","//div[@class=`entry-header`]//h1 ","//div[@class=`content-inner `]","//div[@class=`jeg_meta_date`]"]]
 	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
-
 6.
 	Nombre: Opinion
 	Año de creacion: 2006
@@ -68,7 +62,6 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	Formato:
 	["Opinion","2006","Internacional","https://www.opinion.com.bo/",["blog/section/pais", "blog/section/policial", "blog/section/mundo"],["//div[@class=`article-data`]//h2//a/@href","//h2[@class=`title`]","//div[@class=`content-body inner-article-data col-md-10 col-sm-12 col-ms-12`]//div[contains(@class,`body`)]//p ","//span[@class=`content-time`]"]]
 	#! Da error, algun xpath devuelve mas de lo pedido
-
 7.
 	Nombre: Erbol
 	Año de creacion: 2003
@@ -79,8 +72,6 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 
 	Formato:
 	["Erbol","2003","Internacional","https://www.erbol.com.bo/",["seguridad","mundo","economia"],['''//section[@class="col-sm-8"]//div[@class="field-content"]//a/@href''','''//section[@class="col-sm-8"]//div[@property="dc:title"]//h2''','''//section[@class="col-sm-8"]//div[@property="content:encoded"]//p''','''//section[@class="col-sm-8"]//div[@class="field-item even"]''']]
- 
-
 8.
 	Nombre: El Pais
 	Año de creacion: NA
@@ -90,9 +81,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+ 	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 9.
 	Nombre: El Potosi
 	Año de creacion: 2000
@@ -102,9 +92,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+ 	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 10.
 	Nombre: El Mundo
 	Año de creacion: NA
@@ -114,9 +103,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+ 	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 11.
 	Nombre: El Dia
 	Año de creacion: 1996
@@ -126,9 +114,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 12.
 	Nombre: La Epoca
 	Año de creacion: 2002
@@ -138,9 +125,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 13.
 	Nombre: Brujula Digital
 	Año de creacion: 2008
@@ -150,9 +136,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 14.
 	Nombre: La Region
 	Año de creacion: 2012
@@ -162,9 +147,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 15.
 	Nombre: Correo del Sur
 	Año de creacion: 2001
@@ -174,9 +158,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 16.
 	Nombre: La Patria
 	Año de creacion: 2007
@@ -186,9 +169,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 17.
 	Nombre: El Fulgor
 	Año de creacion: 2021
@@ -198,9 +180,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 18.
 	Nombre: La Voz de Tarija
 	Año de creacion: 2016
@@ -210,9 +191,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	#! Los links a las noticias son completos, por ende con el script de scraping actual no se puede usar este.
 *19.
 	Nombre: El País (Bolivia)
 	Año de creacion: 1996
@@ -427,9 +407,6 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
 ***37.
 	Nombre: El Universo
 	Año de creacion: 1996
@@ -439,9 +416,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	!No es pagina boliviana (parece)
 *38.
 	Nombre: Ambito
 	Año de creacion: 1995
@@ -451,9 +427,8 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
+	[]
+	!No es pagina boliviana (parece)
 *39.
 	Nombre: Clarin
 	Año de creacion: 1996
@@ -463,10 +438,9 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
-***40.
+	[]
+	!No es pagina boliviana (parece)
+***40. 
 	Nombre: Redgol
 	Año de creacion: 2013
 	URL: https://redgol.cl/tema/seleccion-bolivia
@@ -475,11 +449,7 @@ PAGINAS CON * INDICAN QUE NO SON NECESARIAMENTE DE BOLIVIA, SI NO QUE EL PAIS ES
 	xpath: 
 
 	Formato:
-	
- 
-
-
-
-
+	[]
+	!Es pagina chilena
 
 
